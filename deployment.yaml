@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-   name: caps2
+   name: nginx-deployment
    labels:
-     apps: nginx
+     app: nginx
 spec:
    replicas: 3
    selector:
@@ -16,6 +16,6 @@ spec:
       spec:
          containers:
          - name: nginx
-           image: kunjsaini445/nginx
+           image: kunjsaini445/nginx:latest
            ports:
            - containerPort: 80
